@@ -9,7 +9,7 @@ window.onload = function() {
 // Function to create role buttons dynamically for shuffling
 function createRoleButtons() {
     const roleButtonsContainer = document.getElementById('roleButtons');
-    const roles = ['ჟურნალისტი', 'რედაქტორი', 'ფირალი', 'დეტექტივი', 'წარჩინებული', 'მსხვერპლი', 'ინფორმირებული', 'ქალწული', 'გამომძიებელი', 'ლამაზმანი', 'მცველი', 'ტყეში გავარდნილი', 'დაზღვევა', 'ეჭვმიტანილი', 'ამყოლი', 'ბავშვი', 'მემკვიდრე', 'მანიპულატორი', 'ბარონი', 'ჯაშუში', 'მკვლელი', 'მეფისნაცვალი', 'ზედამხედველი', 'მსაჯული'];
+    const roles = ['ჟურნალისტი', 'რედაქტორი', 'ფირალი', 'დეტექტივი', 'წარჩინებული', 'მსხვერპლი', 'ინფორმირებული', 'ქალწული', 'გამომძიებელი', 'ლამაზმანი', 'მცველი', 'ტყეში გავარდნილი', 'დაზღვევა', 'ეჭვმიტანილი', 'ამყოლი', 'ბავშვი', 'მემკვიდრე', 'მანიპულატორი', 'ბარონი', 'ჯაშუში', 'მკვლელი'];
 
     roleButtonsContainer.innerHTML = '';  // Clear any existing buttons
     roles.forEach(role => {
@@ -26,7 +26,7 @@ function createRoleButtons() {
 // Function to populate the role selector dropdown for manual role assignment
 function populateRoleSelector() {
     const roleSelect = document.getElementById('roles');
-    const roles = ['ჟურნალისტი', 'რედაქტორი', 'ფირალი', 'დეტექტივი', 'წარჩინებული', 'მსხვერპლი', 'ინფორმირებული', 'ქალწული', 'გამომძიებელი', 'ლამაზმანი', 'მცველი', 'ტყეში გავარდნილი', 'დაზღვევა', 'ეჭვმიტანილი', 'ამყოლი', 'ბავშვი', 'მემკვიდრე', 'მანიპულატორი', 'ბარონი', 'ჯაშუში', 'მკვლელი', 'მეფისნაცვალი', 'ზედამხედველი', 'მსაჯული'];
+    const roles = ['ჟურნალისტი', 'რედაქტორი', 'ფირალი', 'დეტექტივი', 'წარჩინებული', 'მსხვერპლი', 'ინფორმირებული', 'ქალწული', 'გამომძიებელი', 'ლამაზმანი', 'მცველი', 'ტყეში გავარდნილი', 'დაზღვევა', 'ეჭვმიტანილი', 'ამყოლი', 'ბავშვი', 'მემკვიდრე', 'მანიპულატორი', 'ბარონი', 'ჯაშუში', 'მკვლელი'];
 
     roleSelect.innerHTML = '<option value="">აირჩიე როლი</option>';  // Clear existing options
     roles.forEach(role => {
@@ -40,7 +40,7 @@ function populateRoleSelector() {
 // Function to create the pin buttons
 function populatePinButtons() {
     const pinSelector = document.querySelector('.pin-selector');
-    const pinTypes = ['ლოთი', 'საბუთი', 'სტატია', 'სამხილი', 'დაზღვევა', 'ტყვია', 'ლიდერი', 'სასჯელი', 'ილუზია', 'შხამი', 'მსხვერპლი', 'მსაჯული','მეფისნაცვალი','ხმა'];
+    const pinTypes = ['ლოთი', 'საბუთი', 'სტატია', 'სამხილი', 'დაზღვევა', 'ტყვია', 'ლიდერი', 'სასჯელი', 'ილუზია', 'შხამი', 'მსხვერპლი', 'ხმა'];
 
     
     pinTypes.forEach(pin => {
@@ -129,10 +129,6 @@ function shuffleRoles() {
                 'ბარონი': 'baroni.png',
                 'ჯაშუში': 'jashushi.png',
                 'მკვლელი': 'mkvleli.png',
-                'მეფისნაცვალი': 'mefisnacvali.png',
-                'ზედამხედველი': 'zedamxedveli.png',
-                'მსაჯული': 'msajuli.png',
-
             };
             player.style.backgroundImage = roleImageMap[role] ? `url('images/${roleImageMap[role]}')` : '';
         }
@@ -194,9 +190,6 @@ function assignRole() {
             'ბარონი': 'baroni.png',
             'ჯაშუში': 'jashushi.png',
             'მკვლელი': 'mkvleli.png',
-            'მეფისნაცვალი': 'mefisnacvali.png',
-            'ზედამხედველი': 'zedamxedveli.png',
-            'მსაჯული': 'msajuli.png',
         };
         selectedPlayer.style.backgroundImage = roleImageMap[role] ? `url('images/${roleImageMap[role]}')` : '';
     } else {
@@ -284,12 +277,6 @@ function addToken(tokenName, type) {
                 break;
             case 'მსხვერპლი':
                 token.style.backgroundImage = "url('images/msxverpli.png')";
-                break;
-            case 'მსაჯული':
-                    token.style.backgroundImage = "url('images/msajuli.png')";
-                break;
-            case 'მეფისნაცვალი':
-                    token.style.backgroundImage = "url('images/mefisnacvali.png')";
                 break;
             case 'ხმა':
                 token.style.backgroundImage = "url('images/xma.png')";
