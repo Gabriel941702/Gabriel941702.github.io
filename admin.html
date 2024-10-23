@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="usernameModal" class="modal">
+        <div class="modal-content">
+            <h2>Login</h2>
+            <input type="text" id="usernameInput" placeholder="Enter your username" />
+            <button id="loginButton">Login</button>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <h2>როლები და პინები</h2>
+            <div class="role-selector">
+                <label for="roles">აირჩიე მოთამაშე და შემდეგ როლი:</label>
+                <select id="roles">
+                    <option value="">აირჩიე როლი</option>
+                    <!-- Options will be dynamically generated -->
+                </select>
+                <button id="assignRoleButton" onclick="assignRole()">როლის მინიჭება</button>
+            </div>
+            <div class="role-selection">
+                <label>აირჩიე როლები:</label>
+                <div id="roleButtons" class="role-buttons">
+                    <!-- Role buttons will be dynamically generated here -->
+                </div>
+                <p id="roleCount">არჩეული როლები: 0 / <span id="playerCountDisplay">12</span></p> <!-- Counter display -->
+            </div>
+            <button id="shuffleRolesButton" onclick="shuffleRoles()">აჩეხვა</button>
+            
+            
+            <div class="pin-selector">
+                <!-- Pin buttons will be added here -->
+            </div>
+            <div class="player-count-selector">
+                <label for="playerCount">მოთამაშეების რაოდენობა:</label>
+                <input type="number" id="playerCount" value="12" min="1" max="24">
+                <button onclick="initializePlayers()">მოთამაშეების განახლება</button>
+            </div>
+        </div>
+        <div class="game-container">
+            <div id="gameTable" class="game-table">
+                <!-- Player slots will be added here -->
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script type="" src="admin.js"></script>
+</body>
+</html>
