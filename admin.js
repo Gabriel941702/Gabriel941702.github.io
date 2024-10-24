@@ -13,7 +13,7 @@ window.onload = function() {
 
 function landingOff() {
     console.log('landingOff')
-    document.getElementById('root').style.display = 'none';
+    document.getElementById('root').style.display = 'none !important';
 }
 
 function landingOn() {
