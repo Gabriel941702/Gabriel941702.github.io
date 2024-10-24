@@ -5,9 +5,19 @@ window.onload = function() {
     populatePinButtons();    // Create pin buttons
     updatePlayerCountDisplay();  // Set initial player count in the display
 
+    
+
     modal.style.display = 'flex'; // Show modal as a flexbox for centering
 
 };
+
+function landingOff() {
+    document.getElementById('root').style.display = 'none';
+}
+
+function landingOn() {
+    document.getElementById('root').style.display = 'block';
+}
 
 function initializeGlobalVariables() {
     let playerCount = 0
