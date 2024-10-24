@@ -12,10 +12,12 @@ window.onload = function() {
 };
 
 function landingOff() {
+    console.log('landingOff')
     document.getElementById('root').style.display = 'none';
 }
 
 function landingOn() {
+    console.log('landingOn')
     document.getElementById('root').style.display = 'block';
 }
 
