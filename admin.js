@@ -5,7 +5,7 @@ window.onload = function() {
     populatePinButtons();    // Create pin buttons
     updatePlayerCountDisplay();  // Set initial player count in the display
 
-    
+    landingOff()
 
     modal.style.display = 'flex'; // Show modal as a flexbox for centering
 
