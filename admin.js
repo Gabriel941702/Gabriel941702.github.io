@@ -29,11 +29,11 @@ const modal = document.getElementById('usernameModal');
 const loginButton = document.getElementById('loginButton');
 const usernameInput = document.getElementById('usernameInput');
 
-const socket = io('http://localhost:3000');
+// const socket = io('http://localhost:3000');
 
-socket.on('roomCreated', (data)=> {
-    alert(data.roomId)
-})
+// socket.on('roomCreated', (data)=> {
+//     alert(data.roomId)
+// })
 
 
 
