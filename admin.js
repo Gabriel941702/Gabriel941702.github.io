@@ -1,4 +1,4 @@
-import startServer from './server.mjs';
+import startServer from './server.js';
 
 
 window.onload = function() {
