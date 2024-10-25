@@ -9,7 +9,7 @@ const server = http.createServer(app);
 const io = new Server(server);
 
 
-function generateRoomId() {
+export default function generateRoomId() {
     return Math.random().toString(36).substring(2, 7); // 5-character string
 }
 
