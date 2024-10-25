@@ -1,28 +1,25 @@
 window.onload = function() {
-    // Hide all content initially
     document.getElementById('root').style.display = 'none';
-    modal.style.display = 'flex'; // Show modal as a flexbox for centering
+    modal.style.display = 'flex'; 
 
-    // Add event listener to the login button
-    loginButton.addEventListener('click', function() {
-        const username = usernameInput.value.trim();
-        if (username) {
-            // Hide the modal and show the content
-            modal.style.display = 'none';
-            document.getElementById('root').style.display = 'block';
+    // loginButton.addEventListener('click', function() {
+    //     const username = usernameInput.value.trim();
+    //     if (username) {
+    //         // Hide the modal and show the content
+    //         modal.style.display = 'none';
+    //         document.getElementById('root').style.display = 'block';
 
-            // Initialize the rest of the application
-            initializePlayers();
-            createRoleButtons();  // Create role buttons
-            populateRoleSelector();  // Populate the role selector dropdown
-            populatePinButtons();    // Create pin buttons
-            updatePlayerCountDisplay();  // Set initial player count in the display
+    //         // Initialize the rest of the application
+    //         initializePlayers();
+    //         createRoleButtons();  // Create role buttons
+    //         populateRoleSelector();  // Populate the role selector dropdown
+    //         populatePinButtons();    // Create pin buttons
+    //         updatePlayerCountDisplay();  // Set initial player count in the display
 
-            landingOff();
-        } else {
-            alert('Please enter a username.');
-        }
-    });
+    //     } else {
+    //         alert('Please enter a username.');
+    //     }
+    // });
 };
 
 function landingOff() {
