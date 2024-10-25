@@ -256,18 +256,18 @@ function toggleDead(button) {
 }
 
 // Function to add tokens to players
-function addToken(tokenName, type) {
-    if (selectedPlayer) {
-        const tokensContainer = selectedPlayer.querySelector('.tokens');
-        const token = document.createElement('div');
-        token.className = `token ${type}`;
-        token.textContent = tokenName;
-        token.onclick = () => token.remove();  // Remove token on click
-        tokensContainer.appendChild(token);
-    } else {
-        alert('Select a player first');
-    }
-}
+// function addToken(tokenName, type) {
+//     if (selectedPlayer) {
+//         const tokensContainer = selectedPlayer.querySelector('.tokens');
+//         const token = document.createElement('div');
+//         token.className = `token ${type}`;
+//         token.textContent = tokenName;
+//         token.onclick = () => token.remove();  // Remove token on click
+//         tokensContainer.appendChild(token);
+//     } else {
+//         alert('Select a player first');
+//     }
+// }
 
 function addToken(tokenName, type) {
     if (selectedPlayer) {
