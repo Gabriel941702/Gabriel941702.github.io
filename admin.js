@@ -1,4 +1,4 @@
-const startServer = require('./server');
+import startServer from './server.mjs';
 
 
 window.onload = function() {
@@ -18,7 +18,7 @@ window.onload = function() {
             populateRoleSelector();  // Populate the role selector dropdown
             populatePinButtons();    // Create pin buttons
             updatePlayerCountDisplay();  // Set initial player count in the display
-
+            startServer()
         } else {
             alert('Please enter a username.');
         }

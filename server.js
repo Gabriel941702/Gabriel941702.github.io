@@ -18,36 +18,36 @@ const PORT = 3000;
 
 function startServer() {
 
-io.on('connection', (socket) => {
+    io.on('connection', (socket) => {
 
-    socket.on('authenticate-player', (data) => {
-        console.log('authenticate-player',data.name)
-    })
+        socket.on('authenticate-player', (data) => {
+            console.log('authenticate-player', data.name)
+        })
 
-    socket.on('authenticate-admin', (data) => {
-        console.log('authenticate-admin',data.name)
-        
-        createGame()
-    })
+        socket.on('authenticate-admin', (data) => {
+            console.log('authenticate-admin', data.name)
 
-
-    function createGame() {
-        console.log('createGame')
-        const roomId = generateRoomId(); // Generate a random room ID
-        socket.join(roomId); // The client joins this room
-    
-        // Send the room ID back to the client
-        socket.emit('roomCreated', { roomId: roomId });
-        console.log(`Room created with ID: ${roomId}`);
-    
-    }
-    
-});
+            createGame()
+        })
 
 
-server.listen(PORT, () => {
-    console.log(`Server is running at http://localhost:${PORT}`);
-});
+        function createGame() {
+            console.log('createGame')
+            const roomId = generateRoomId(); // Generate a random room ID
+            socket.join(roomId); // The client joins this room
+
+            // Send the room ID back to the client
+            socket.emit('roomCreated', { roomId: roomId });
+            console.log(`Room created with ID: ${roomId}`);
+
+        }
+
+    });
+
+
+    server.listen(PORT, () => {
+        console.log(`Server is running at http://localhost:${PORT}`);
+    });
 }
 
 module.exports = startServer;
