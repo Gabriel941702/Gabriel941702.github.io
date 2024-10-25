@@ -1,25 +1,28 @@
+const startServer = require('./server');
+
+
 window.onload = function() {
     document.getElementById('root').style.display = 'none';
     modal.style.display = 'flex'; 
 
-    // loginButton.addEventListener('click', function() {
-    //     const username = usernameInput.value.trim();
-    //     if (username) {
-    //         // Hide the modal and show the content
-    //         modal.style.display = 'none';
-    //         document.getElementById('root').style.display = 'block';
+    loginButton.addEventListener('click', function() {
+        const username = usernameInput.value.trim();
+        if (username) {
+            // Hide the modal and show the content
+            modal.style.display = 'none';
+            document.getElementById('root').style.display = 'block';
 
-    //         // Initialize the rest of the application
-    //         initializePlayers();
-    //         createRoleButtons();  // Create role buttons
-    //         populateRoleSelector();  // Populate the role selector dropdown
-    //         populatePinButtons();    // Create pin buttons
-    //         updatePlayerCountDisplay();  // Set initial player count in the display
+            // Initialize the rest of the application
+            initializePlayers();
+            createRoleButtons();  // Create role buttons
+            populateRoleSelector();  // Populate the role selector dropdown
+            populatePinButtons();    // Create pin buttons
+            updatePlayerCountDisplay();  // Set initial player count in the display
 
-    //     } else {
-    //         alert('Please enter a username.');
-    //     }
-    // });
+        } else {
+            alert('Please enter a username.');
+        }
+    });
 };
 
 function landingOff() {

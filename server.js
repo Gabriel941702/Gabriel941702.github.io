@@ -16,6 +16,7 @@ function generateRoomId() {
 
 const PORT = 3000;
 
+function startServer() {
 
 io.on('connection', (socket) => {
 
@@ -47,6 +48,7 @@ io.on('connection', (socket) => {
 server.listen(PORT, () => {
     console.log(`Server is running at http://localhost:${PORT}`);
 });
+}
 
-
+module.exports = startServer;
 
