@@ -388,21 +388,21 @@ function makeTokenDraggable(token) {
 }
 
 
-loginButton.addEventListener('click', () => {
-    const username = usernameInput.value.trim();
+// loginButton.addEventListener('click', () => {
+//     const username = usernameInput.value.trim();
     
-    if (username) {
-        // Process login (e.g., store username or send it to a server)
-        console.log('Logged in as:', username);
+//     if (username) {
+//         // Process login (e.g., store username or send it to a server)
+//         console.log('Logged in as:', username);
         
-        socket.emit('authenticate-admin', {
-            name:username
-        })
+//         socket.emit('authenticate-admin', {
+//             name:username
+//         })
 
-        // Hide the modal
-        modal.style.display = 'none';
+//         // Hide the modal
+//         modal.style.display = 'none';
 
-    } else {
-        alert('Please enter a username');
-    }
-});
+//     } else {
+//         alert('Please enter a username');
+//     }
+// });
